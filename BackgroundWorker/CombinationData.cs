@@ -15,5 +15,7 @@ namespace BackgroundWorker
         public required string Word { get; set; }
 
         public required int Count { get; set; }
+
+        public int AssetId { get; set; }
     }
 }

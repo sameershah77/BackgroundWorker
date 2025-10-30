@@ -52,6 +52,10 @@ namespace BackgroundWorker
                 var average = values.Any() ? values.Average() : 0;
                 Console.WriteLine($"✅ Average for {msg.ColumnName} = {average}");
 
+                Console.WriteLine("Waiting...");
+                Console.WriteLine("Wait completed");
+
+
                 // Send response message
                 var response = new
                 {
@@ -63,6 +67,8 @@ namespace BackgroundWorker
 
                 _channel.BasicPublish("", ResponseQueue, null, body);
                 _channel.BasicAck(ea.DeliveryTag, false);
+
+
             };
 
             _channel.BasicConsume(RequestQueue, false, consumer);
@@ -82,6 +88,4 @@ namespace BackgroundWorker
             base.Dispose();
         }
     }
-
-
 }

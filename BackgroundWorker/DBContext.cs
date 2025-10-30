@@ -10,7 +10,5 @@ namespace BackgroundWorker
 
         }
         public DbSet<CombinationData> Combinations { get; set; }
-
-
     }
 }

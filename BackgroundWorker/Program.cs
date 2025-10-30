@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddHostedService<AverageCalculationWorker>();
+builder.Services.AddHostedService<CombinationInsertWorker>();
 
 
 
