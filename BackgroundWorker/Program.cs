@@ -9,11 +9,7 @@ builder.Services.AddHostedService<CombinationInsertWorker>();
 
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("DefaultConnection");
-//builder.Services.AddDbContext<DBContext>(options => options.UseSqlServer(connectionString));
-
-builder.Services.AddDbContext<DBContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
+builder.Services.AddDbContext<DBContext>(options => options.UseSqlServer(connectionString));
 
 var host = builder.Build();
 host.Run();

@@ -55,7 +55,6 @@ namespace BackgroundWorker
                 Console.WriteLine("Waiting...");
                 Console.WriteLine("Wait completed");
 
-
                 // Send response message
                 var response = new
                 {

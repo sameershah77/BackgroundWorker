@@ -1,9 +1,9 @@
-﻿using BackgroundWorker;
+﻿using BackgroundWorker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BackgroundWorker
+namespace BackgroundWorker.Algorithm
 {
     public static class CombinationHelper
     {
@@ -43,7 +43,7 @@ namespace BackgroundWorker
 
                 if (seen.Add(word)) // HashSet.Add returns false if already exists
                 {
-                    int asciiSum = current.Sum(c => (int)c);
+                    int asciiSum = current.Sum(c => c);
                     result.Add(new CombinationData
                     {
                         Word = word,

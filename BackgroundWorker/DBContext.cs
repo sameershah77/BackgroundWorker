@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BackgroundWorker.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 namespace BackgroundWorker

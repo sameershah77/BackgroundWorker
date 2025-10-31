@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BackgroundWorker
+namespace BackgroundWorker.Models
 {
     public class Asset
     {
